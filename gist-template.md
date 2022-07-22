@@ -22,20 +22,20 @@ This allows users to search up color hexcodes with some kind of robustness. The 
 ## Regex Components
 Matching a Hex Value - "/^#?([a-f0-9]{6}|[a-f0-9]{3})$/"
 ### Anchors
-"^"
+"`^`"
 
 This will highlight/match any string that starts with the pound symbol (#). Which in this case of Hex values will be most if not all hex values.
 
-"$"
+"`$`"
 
 This will match any string that ends with ")"
 **When "^ and $" are combined, which they are in this case it will match an exact string that starts with "#" and end with ")"
 ### Quantifiers
-"?"
+"`?`"
 
 This will match a string that has "#" followed by either a 0 or "("
 
-"{6}", "{3}"
+"`{6}`", "`{3}`"
 
 This will match any strings that has # followed by any hex code that has [a-f0-9] up to 6 times or alternatively up to 3 times.
 ### OR Operator
@@ -45,15 +45,15 @@ In this regex there are no operators
 In this rgex there are no character classes. But in other regex they show up as "\d, \w, and \s" in which they each have their own function.
 Which are the following: "matches a single character that is a digit, matches a character that is a digit 0-9, and matches a character is a space or white space". In that order. 
 ### Flags
-"/all/"
+"`/all/`"
 
 In this regex the entirety is encapsalated by the slashes, sometimes there are other characters to denote other functions such as "/i" for the whole expression to be case-insensitive but in this case there are none.
 ### Grouping and Capturing
-"([a-f0-9]{6}|[a-f0-9]{3})"
+"`([a-f0-9]{6}|[a-f0-9]{3})`"
 
 This is grouping and capturing two sets of groups. The first being       "[a-f0-9]{6}" and the second being "[a-f0-9]{3}"
 ### Bracket Expressions
-"[a-f0-9]"
+"`[a-f0-9]`"
 
 This captures any string that has a value of a-f and a value of 0-9
 ### Greedy and Lazy Match
